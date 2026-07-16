@@ -6,6 +6,7 @@
 - Django Rest Framework
 - PostgreSQL
 ---
+
 ### Команды
 `python manage.py create_custom_superuser` - Команда для создания суперпользователя
 
@@ -16,6 +17,8 @@
 ---
 
 ### Эндпоинты:
+`http://127.0.0.1:8000/redoc/`  
+`http://127.0.0.1:8000/swagger/`
 
 ---
 
