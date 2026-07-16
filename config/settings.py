@@ -22,9 +22,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # My apps
+    # Third party apps
     'drf_yasg',
+    'imagekit',
+    # My apps
     'users',
+    'products',
 ]
 
 MIDDLEWARE = [
