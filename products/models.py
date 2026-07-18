@@ -18,11 +18,6 @@ class Category(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        # Debug --------------------------------
-        print(f"name={self.name!r}")           #
-        print(f"slug={slugify(self.name)!r}")  #
-        # --------------------------------------
-
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
