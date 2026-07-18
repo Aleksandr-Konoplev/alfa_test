@@ -4,21 +4,21 @@ from .models import Category, Subcategory, Product
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
+    readonly_fields = ('slug',)
     list_display = ('name', 'slug', 'image',)
     search_fields = ('name', 'slug',)
 
 
 @admin.register(Subcategory)
 class SubcategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
+    readonly_fields = ('slug',)
     list_display = ('name', 'category', 'slug',)
     search_fields = ('name', 'slug',)
 
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
+    readonly_fields = ('slug',)
     list_display = ('name', 'get_category', 'subcategory', 'slug', 'price',)
     search_fields = ('name', 'slug',)
 

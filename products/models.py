@@ -6,9 +6,9 @@ from imagekit.processors import ResizeToFit
 
 class Category(models.Model):
     """ Модель категории. """
-    name = models.CharField(max_length=255, verbose_name='Наименование категории')
-    slug = models.SlugField(max_length=255, unique=True, verbose_name='Slug')
-    image = models.ImageField(upload_to='categories/', verbose_name='Изображение')
+    name = models.CharField(max_length=255, verbose_name='Наименование категории', unique=True, blank=True)
+    slug = models.SlugField(max_length=255, verbose_name='Slug', unique=True, blank=True)
+    image = models.ImageField(upload_to='categories/', verbose_name='Изображение', default='default_image_category_1.png')
 
     class Meta:
         verbose_name = 'Категория'
@@ -18,8 +18,7 @@ class Category(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
+        self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
 
@@ -41,8 +40,7 @@ class Subcategory(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
+        self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
 
@@ -81,6 +79,5 @@ class Product(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
+        self.slug = slugify(self.name)
         super().save(*args, **kwargs)
