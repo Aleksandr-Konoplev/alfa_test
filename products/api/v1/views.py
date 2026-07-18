@@ -14,6 +14,8 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     pagination_class = CategoryPagination
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
 
 
 # --------------------- CRUD Подкатегории -----------------
@@ -21,6 +23,8 @@ class SubcategoryViewSet(viewsets.ModelViewSet):
     queryset = Subcategory.objects.all()
     serializer_class = SubcategorySerializer
     pagination_class = SubcategoryPagination
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
 
 
 # --------------------- CRUD Продукты ---------------------

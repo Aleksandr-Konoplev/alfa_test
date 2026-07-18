@@ -1,14 +1,14 @@
 from django.db import models
-from django.utils.text import slugify
+from slugify import slugify
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit
 
 
 class Category(models.Model):
     """ Модель категории. """
-    name = models.CharField(max_length=255, verbose_name='Наименование категории', unique=True, blank=True)
+    name = models.CharField(max_length=255, verbose_name='Наименование категории', unique=True)
     slug = models.SlugField(max_length=255, verbose_name='Slug', unique=True, blank=True)
-    image = models.ImageField(upload_to='categories/', verbose_name='Изображение', default='default_image_category_1.png')
+    image = models.ImageField(upload_to='categories/', verbose_name='Изображение')
 
     class Meta:
         verbose_name = 'Категория'
@@ -18,6 +18,11 @@ class Category(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
+        # Debug --------------------------------
+        print(f"name={self.name!r}")           #
+        print(f"slug={slugify(self.name)!r}")  #
+        # --------------------------------------
+
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
