@@ -1,0 +1,220 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Электроника",
+      "slug": "placeholder",
+      "image": "categories/category_electronic.png"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Продукты питания",
+      "slug": "placeholder",
+      "image": "categories/category_food_products.png"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "Бытовая химия",
+      "slug": "placeholder",
+      "image": "categories/category_household_chemicals.png"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Электронные компоненты",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_electronic_components.png",
+      "category_id": 1
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Офисная техника",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_office_equipment.png",
+      "category_id": 1
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Выпечка",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_bakery.png",
+      "category_id": 2
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Молочные продукты",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_dairy_products.png",
+      "category_id": 2
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Овощи и фрукты",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_vegetables_fruits.png",
+      "category_id": 2
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 6,
+    "fields": {
+      "name": "Моющие средства",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_detergents.png",
+      "category_id": 3
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "pk": 7,
+    "fields": {
+      "name": "Удобрения",
+      "slug": "placeholder",
+      "image": "subcategories/subcategory_fertilizers.png",
+      "category_id": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Процессор",
+      "slug": "placeholder",
+      "price": "15000.00",
+      "image": "products/product_processor.png",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Ноутбук",
+      "slug": "placeholder",
+      "price": "75000.00",
+      "image": "products/product_laptop.png",
+      "subcategory_id": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Принтер",
+      "slug": "placeholder",
+      "price": "25000.00",
+      "image": "products/product_printer.png",
+      "subcategory_id": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Хлеб",
+      "slug": "placeholder",
+      "price": "50.00",
+      "image": "products/product_bread.png",
+      "subcategory_id": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Молоко",
+      "slug": "placeholder",
+      "price": "80.00",
+      "image": "products/product_milk.png",
+      "subcategory_id": 4
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Сыр",
+      "slug": "placeholder",
+      "price": "350.00",
+      "image": "products/product_cheese.png",
+      "subcategory_id": 4
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Творожная запеканка",
+      "slug": "placeholder",
+      "price": "150.00",
+      "image": "products/product_curd_cheesecake.png",
+      "subcategory_id": 4
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Банан",
+      "slug": "placeholder",
+      "price": "120.00",
+      "image": "products/product_banana.png",
+      "subcategory_id": 5
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Помидор",
+      "slug": "placeholder",
+      "price": "180.00",
+      "image": "products/product_tomato.png",
+      "subcategory_id": 5
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Стиральный порошок",
+      "slug": "placeholder",
+      "price": "400.00",
+      "image": "products/product_washing_powder.png",
+      "subcategory_id": 6
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Удобрение для цветов",
+      "slug": "placeholder",
+      "price": "250.00",
+      "image": "products/product_fertilizer_for_flowers.png",
+      "subcategory_id": 7
+    }
+  }
+]
