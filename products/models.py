@@ -8,7 +8,7 @@ class Category(models.Model):
     """ Модель категории. """
     name = models.CharField(max_length=255, verbose_name='Наименование категории', unique=True)
     slug = models.SlugField(max_length=255, verbose_name='Slug', unique=True, blank=True)
-    image = models.ImageField(upload_to='categories/', verbose_name='Изображение')
+    image = models.ImageField(upload_to='categories/', verbose_name='Изображение', default='default_image.png', blank=True)
 
     class Meta:
         verbose_name = 'Категория'
@@ -26,7 +26,7 @@ class Subcategory(models.Model):
     """ Модель подкатегории. """
     name = models.CharField(max_length=255, verbose_name='Наименование подкатегории')
     slug = models.SlugField(max_length=255, unique=True, verbose_name='Slug')
-    image = models.ImageField(upload_to='subcategories/', verbose_name='Изображение')
+    image = models.ImageField(upload_to='subcategories/', verbose_name='Изображение', default='default_image.png', blank=True)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE,
         related_name='subcategories', verbose_name='Категория'
@@ -49,7 +49,7 @@ class Product(models.Model):
     name = models.CharField(max_length=255, verbose_name='Наименование продукта')
     slug = models.SlugField(max_length=255, unique=True, verbose_name='Slug')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
-    image = models.ImageField(upload_to='products/', verbose_name='Изображение')
+    image = models.ImageField(upload_to='products/', verbose_name='Изображение', default='default_image.png', blank=True)
     image_200x200 = ImageSpecField(
         source='image',
         processors=[ResizeToFit(200, 200)],

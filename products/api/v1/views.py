@@ -41,12 +41,18 @@ class ProductListAPIView(ListAPIView):
 class ProductDetailAPIView(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
 
 
 class ProductUpdateAPIView(UpdateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
 
 
 class ProductDestroyAPIView(DestroyAPIView):
     queryset = Product.objects.all()
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
