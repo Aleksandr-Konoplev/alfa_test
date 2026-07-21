@@ -11,6 +11,7 @@ urlpatterns = [
     # Category urls
     path('category/create/', CategoryViewSet.as_view({'post': 'create'})),
     path('category/list/', CategoryViewSet.as_view({'get': 'list'})),
+    path('category/list-with-subcategories/', CategoryViewSet.as_view({'get': 'with_subcategories'})),
     path('category/<slug:slug>/detail/', CategoryViewSet.as_view({'get': 'retrieve'})),
     path('category/<slug:slug>/update/', CategoryViewSet.as_view({'patch': 'partial_update', 'put': 'update'})),
     path('category/<slug:slug>/delete/', CategoryViewSet.as_view({'delete': 'destroy'})),
